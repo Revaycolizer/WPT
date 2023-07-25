@@ -7,8 +7,8 @@ import {Truck} from "lucide-react"
 export default function SideNavbar() {
   const [showLabels, setShowLabels] = useState(false);
   const [showNav, setShowNav] = useState(false);
-  const [user,setUser] = createUser((state)=>[state.user,state.setUser])
-  const [isLoading,setisLoading] = createUser((state)=>[state.isLoading,state.setisLoading])
+  const [setUser] = createUser((state)=>[state.setUser])
+  const [setisLoading] = createUser((state)=>[state.setisLoading])
 
   const navigate = useNavigate()
   const handleMouseEnter = () => {

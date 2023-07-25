@@ -4,9 +4,9 @@ import { Input } from "src/components/ui/input";
 import { createUser } from "../../src/libs/zustand";
 import axios from "axios";
 import toast from "react-hot-toast";
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from 'src/components/ui/dialog'
+import React, {  useState } from "react";
+
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogTitle, DialogTrigger } from 'src/components/ui/dialog'
 import Protected from "../routes/Protected";
 import {DatePicker} from 'rsuite'
 import 'rsuite/dist/rsuite.min.css'
@@ -36,7 +36,7 @@ export default function SpecificTrip(){
    const WptIt = "2"
    const WptUt = "1"
    
-   const navigate = useNavigate()
+   
    
    // useEffect(()=>{
    //   handleSubmit()

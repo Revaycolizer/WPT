@@ -1,39 +1,30 @@
 
 import { useLocation } from 'react-router-dom';
-import { MapContainer, TileLayer, Marker, Popup,Circle} from 'react-leaflet';
-import icon from '../icons/pin.png'
-import n from '../icons/location-pin.png'
-import L from 'leaflet';
-import { Card } from "src/components/ui/card";
+
+// import icon from '../icons/pin.png'
+// import n from '../icons/location-pin.png'
+// import L from 'leaflet';
+
 import { Box } from '@chakra-ui/react';
-import {FcBusinessman} from 'react-icons/fc'
-import {TbBusStop} from 'react-icons/tb'
-import {MdOutlineDateRange} from 'react-icons/md'
-import {GiPathDistance} from 'react-icons/gi'
-import {BiSolidTime} from 'react-icons/bi'
-import {TbReport} from 'react-icons/tb'
-import {GrStatusInfo} from 'react-icons/gr'
-import {BsTelephone} from 'react-icons/bs'
+
 import Protected from '../routes/Protected';
-import { createUser } from '../libs/zustand';
-import {Smartphone,Signal,Home,ActivityIcon,SprayCan,Car,Square,SquareDot} from 'lucide-react'
 
 
 export default function Trip(){
 
-    const con = L.icon({
-        iconUrl: icon,
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-      })
+    // const con = L.icon({
+    //     iconUrl: icon,
+    //     iconSize: [38, 38],
+    //     iconAnchor: [19, 38],
+    //     popupAnchor: [0, -38],
+    //   })
 
-      const co = L.icon({
-        iconUrl: n,
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-      })
+    //   const co = L.icon({
+    //     iconUrl: n,
+    //     iconSize: [38, 38],
+    //     iconAnchor: [19, 38],
+    //     popupAnchor: [0, -38],
+    //   })
 
     const location = useLocation();
     const spectrips = location.state?.spectrip;

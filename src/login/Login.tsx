@@ -17,8 +17,8 @@ export default function Login() {
  
   const [UserName,setUserName] =createUser((state)=>[state.UserName,state.setUserName])
   const [Password,setPassword] =createUser((state)=>[state.Password,state.setPassword])
-  const [user,setUser] = createUser((state)=>[state.user,state.setUser])
-  const [isLoading,setisLoading] = createUser((state)=>[state.isLoading,state.setisLoading])
+  const [setUser] = createUser((state)=>[state.setUser])
+  const [setisLoading] = createUser((state)=>[state.setisLoading])
   
 
   const formData = {UserName,Password}

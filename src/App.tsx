@@ -20,7 +20,7 @@ import Protected from './routes/Protected';
 
 import Trip from './mytrips/Trip';
 import SpecificTrip from './specifictrip/SpecificTrip';
-import { SideBar } from './sidebar/SideNavBar';
+
 import Sidebar from './sidebar/Sidebar';
 import 'rsuite/dist/rsuite.min.css'
 
