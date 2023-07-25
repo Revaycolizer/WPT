@@ -1,0 +1,384 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  width: 0;
+}
+
+.sidenav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.sidenav a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.sidenav a span {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .sidenav {
+    width: 200px;
+  }
+
+  .sidenav a {
+    font-size: 20px;
+    color: #818181;
+    padding: 8px 8px 8px 32px;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #818181;
+  }
+
+  .sidenav a span {
+    display: inline-block;
+    margin-left: 16px;
+  }
+}
+
+
+/* .sidenav-toggle {
+  display: none;
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  width: 0;
+}
+
+.sidenav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.sidenav a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.sidenav a span {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .sidenav-toggle {
+    display: none;
+  }
+
+  .sidenav {
+    width: 200px;
+  }
+
+  .sidenav a {
+    font-size: 20px;
+    color: #818181;
+    padding: 8px 8px 8px 32px;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #818181;
+  }
+
+  .sidenav a span {
+    display: inline-block;
+    margin-left: 16px;
+  }
+} */
+
+.sidenav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidenav-toggle {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    z-index: 9999;
+  }
+
+  .sidenav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    z-index: 9998;
+  }
+
+  .sidenav.show {
+    left: 0;
+  }
+
+  .sidenav a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .sidenav a:hover {
+    background-color: #f2f2f2;
+  }
+
+  .sidenav a span {
+    display: none;
+  }
+
+  .sidenav a:hover span {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .sidenav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .sidenav a span {
+    margin-left: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  img {
+    width: 100px;
+    height: 100px;
+    margin-right: 8px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* @media screen and (min-width: 1020px) {
+  .map {
+    width: 100%;
+    height: 400px;
+  }
+
+  
+} */
+/* 
+.map {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media only screen and (min-width: 820px) {
+  .map {
+    width: 400px;
+    height: 100px;
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  .map {
+    width: 100%;
+    height: 100px;
+  }
+
+  
+} */
+
