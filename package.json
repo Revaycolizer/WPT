@@ -1,5 +1,5 @@
 {
-  "proxy": "http://31.220.52.147:2003",
+  
   "name": "components",
   "version": "0.1.0",
   "private": true,
